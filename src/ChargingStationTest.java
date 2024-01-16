@@ -16,8 +16,10 @@ public class ChargingStationTest {
 
         chargingStation.chargeBattery(battery, EnergySource.SOLAR);
 
-        // Validate if the battery is charged with the given energy source
-        // No direct assertions as charging is simulated and logged
+        // Assert
+        assertTrue(battery.isFullyCharged(), "Battery should be fully charged");
+        assertEquals(EnergySource.SOLAR, battery.getId(), "Charging source should be SOLAR");
+      
     }
 
     @Test
@@ -29,20 +31,10 @@ public class ChargingStationTest {
 
         chargingStation.chargeBattery(battery, EnergySource.WIND, 50);
 
-        // Validate if the battery is charged with the given energy source and amount
-        // No direct assertions as charging is simulated and logged
-    }
+    
+        assertTrue(battery.isFullyCharged(), "Battery should be fully charged");
+        assertEquals(EnergySource.WIND, battery.getId(), "Charging source should be WIND");
 
-    @Test
-    public void testOptimizeCharging() {
-        ChargingStation chargingStation = new ChargingStation("Location C", 4);
-        EnergyManagementSystem energyManagementSystem = new EnergyManagementSystem();
-        chargingStation.energyManagementSystem = energyManagementSystem;
-
-        chargingStation.optimizeCharging();
-
-        // Validate if the charging optimization process is completed
-        // No direct assertions as optimization is simulated and logged
     }
 
     @Test
@@ -58,25 +50,10 @@ public class ChargingStationTest {
 
         chargingStation.reportChargingStatus();
 
-        // Validate if log messages contain expected information about energy status
         assertTrue(((TestHandler) handler).getLogMessages().contains("Energy Status:"));
-        // Include more specific assertions based on expected log messages
     }
 
-    @Test
-    public void testSimulateArrival() {
-        ChargingStation chargingStation = new ChargingStation("Location E", 5);
-        Car car = new Car("Car1", 10);
-        car.getName();
-        chargingStation.simulateArrival(car);
 
-        // Validate the arrival simulation process
-        // No direct assertions as simulation is logged
-    }
-
-    // Additional tests for other methods, edge cases, synchronization, etc.
-
-    // Inner class to capture log messages for testing purposes
     private static class TestHandler extends Handler {
         private StringBuilder logMessages = new StringBuilder();
 

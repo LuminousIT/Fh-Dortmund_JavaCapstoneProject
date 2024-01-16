@@ -9,14 +9,14 @@ class BaseLoggerTest {
 
 	@Test
 	public void testLog() {
-		// Redirect System.out to capture printed output
+	
 		ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(outputStreamCaptor));
 
 		BaseLogger baseLogger = new BaseLogger();
 		baseLogger.log("Test log message");
 
-		// Verify the output using assertEquals
+
 		assertEquals("Test log message\n", outputStreamCaptor.toString());
 	}
 

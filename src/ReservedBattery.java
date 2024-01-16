@@ -18,4 +18,5 @@ public class ReservedBattery {
     public void markAsFullyCharged() {
         isFullyCharged = true;
     }
+
 }

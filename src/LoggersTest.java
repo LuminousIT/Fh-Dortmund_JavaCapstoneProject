@@ -14,12 +14,11 @@ public class LoggersTest {
 
         String logMessage = "Test log message";
 
-        // Log messages
+     
         chargingStationLogger.logActivity(logMessage);
         energyLogger.logActivity(logMessage);
         usersLogger.logActivity(logMessage);
 
-        // Verify logs were written correctly
         assertEquals(logMessage + System.lineSeparator(), getLastLine("charging_station_log.txt"));
         assertEquals(logMessage + System.lineSeparator(), getLastLine("energy_management_system_log.txt"));
         assertEquals(logMessage + System.lineSeparator(), getLastLine("users_log.txt"));

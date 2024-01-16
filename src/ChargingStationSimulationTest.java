@@ -12,11 +12,9 @@ public class ChargingStationSimulationTest {
         ChargingStation chargingStation1 = mock(ChargingStation.class);
         ChargingStation chargingStation2 = mock(ChargingStation.class);
 
-        // Create the ChargingStationSimulation object
         ChargingStationSimulation simulation = new ChargingStationSimulation();
-//        ChargingStationSimulation.configureLogging(); // Assuming configureLogging() is a static method
+        ChargingStationSimulation.configureLogging(); // Assuming configureLogging() is a static method
 
-        // Mocking and setting up the scheduled executor service
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(2);
         when(executor.schedule(any(Runnable.class), anyLong(), any(TimeUnit.class)))
                 .thenAnswer(invocation -> {
@@ -31,7 +29,6 @@ public class ChargingStationSimulationTest {
         simulationThread.start();
         simulationThread.join(60000); // Wait for 60 seconds (simulation time)
 
-        // Validating if simulateArrival method was invoked for both stations
         verify(chargingStation1, atLeastOnce()).simulateArrival(any());
         verify(chargingStation2, atLeastOnce()).simulateArrival(any());
 

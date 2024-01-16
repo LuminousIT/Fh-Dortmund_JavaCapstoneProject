@@ -21,7 +21,6 @@ class LogFileManagerTest {
 
 	    @Test
 	    public void testGetRequestedLogFiles_WithValidSearchTerm() throws IOException {
-	        // Create a temporary directory and some log files for testing
 	        Path tempDir = Files.createTempDirectory("test_logs");
 	        Path logFile1 = Files.createFile(Paths.get(tempDir.toString(), "equipment1_log.txt"));
 	        Path logFile2 = Files.createFile(Paths.get(tempDir.toString(), "equipment2_log.txt"));
@@ -34,7 +33,6 @@ class LogFileManagerTest {
 	        assertEquals(1, foundFiles.size());
 	        assertEquals(logFile1.toString(), foundFiles.get(0));
 
-	        // Clean up: Delete temporary files and directory
 	        Files.deleteIfExists(logFile1);
 	        Files.deleteIfExists(logFile2);
 	        Files.deleteIfExists(logFile3);
