@@ -1,0 +1,5 @@
+Station Index 1. Car1 Max Wait Time: 6
+Station Index 0. Car2 Max Wait Time: 6
+Station Index 1. Car3 Max Wait Time: 0
+Station Index 1. Car4 Max Wait Time: 7
+Station Index 1. Car5 Max Wait Time: 9

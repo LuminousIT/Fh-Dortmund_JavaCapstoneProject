@@ -1,27 +1,50 @@
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.logging.Logger;
+
+/**
+ * 
+ * 
+ * New class, initialize charging stations, initialize two queues queueOne =>
+ * CS1, queueTwo => CS2, ...method to Get which CS to use. Method accepts CAR &
+ * Index of CS as argument. ...puts the car in the queue of CS of index passed
+ * in. .....if the status is isCharging, it waits for MAXTIME of CS to be
+ * exceeded .....if maxWaitTime of the CS is not exceeded, Car in CS if
+ * maxWaitTime of the CS is exceeded, adds a new car from queue to CS if
+ * maxWaitTime of the CS is exceeded, and Queue is empty, set Status of CS to
+ * Empty
+ * 
+ */
 
 public class ChargingSimulation {
-	 public static void main(String[] args) {
-	        ChargingStation station1 = new ChargingStation("Station A", 3);
-	        ChargingStation station2 = new ChargingStation("Station B", 2);
+	ChargingSimulationLoggers chargingSimulationLoggers =  new ChargingSimulationLoggers();
+	ChargingStation chargingStation1 = new ChargingStation("Station A", 3);
+	ChargingStation chargingStation2 = new ChargingStation("Station B", 2);
 
-	        ExecutorService executorService = Executors.newFixedThreadPool(5); // Simulating 5 reserved batteries
-	        int numBatteries = 5;
+	List<ChargingStation> chargingStationList = List.of(chargingStation1, chargingStation2);
 
-	        for (int i = 0; i < numBatteries; i++) {
-	            ReservedBattery battery = new ReservedBattery(i + 1);
-	            EnergySource energySource = getRandomEnergySource(); // Get a random energy source
-	            ChargingStation station = (i % 2 == 0) ? station1 : station2; // Alternate between stations
-	            executorService.submit(() -> station.chargeBattery(battery, energySource));
-	        }
+	public void simulateChargingStation(Car car, int index, User user) {
+		ChargingStation station = chargingStationList.get(index);
+		station.simulateCarArrival(car,user);
 
-	        executorService.shutdown();
-	    }
+		System.out.println(car.getName() + " will be charging in " + station.getLocation());
+		chargingSimulationLoggers.logActivity(car.getName() + " will be charging in " + station.getLocation());
+//    	 if(station.getAvailability()) { 
+//    		 station.startChargingCar();
+//    	 }
+	}
 
-	    static EnergySource getRandomEnergySource() {
-	        EnergySource[] sources = EnergySource.values();
-	        int index = (int) (Math.random() * sources.length);
-	        return sources[index];
-	    }
+	public void runSimulationThread() {
+		ChargingStation station1 = chargingStationList.get(0);
+		if (station1.getAvailability()) { // means no thread is running
+			station1.startChargingCar();
+		}
+		ChargingStation station2 = chargingStationList.get(1);
+		if (station2.getAvailability()) {
+			station2.startChargingCar();
+		}
+	}
+
+
 }

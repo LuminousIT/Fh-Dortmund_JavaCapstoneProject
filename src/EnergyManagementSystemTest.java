@@ -23,7 +23,7 @@ public class EnergyManagementSystemTest {
 	@Test
 	public void testOptimizeEnergyUsage() {
 	}
-
+	
 	@Test
 	public void testReportEnergyStatus() {
 		EnergyManagementSystem energySystem = new EnergyManagementSystem();
