@@ -93,7 +93,7 @@ public class ChargingStation implements Serializable {
 								usersLoggers.logActivity(user.getFullname() + " " + car.getName() + " has charged for  "
 										+ MAX_WAIT_TIME + " seconds and left/kicked out of the queue. "
 										+ timeLeftTillFullCharge + " seconds left till full charge");
-
+								
 								break;
 							}
 						} catch (Exception error) {

@@ -82,6 +82,7 @@ class EnergyManagementSystemLoggers extends BaseLogger {
 	        } catch (IOException e) {
 	            e.printStackTrace();
 	        }
+		  
 	 }
 }
 

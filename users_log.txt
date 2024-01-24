@@ -1,14 +1,13 @@
-Jane is meant to charge for 6. Station B charging time is 5
-Michael is meant to charge for 6. Station A charging time is 5
-Michael Car2 has charged for  5 seconds and left/kicked out of the queue. 1 seconds left till full charge
-Jane Car1 has charged for  5 seconds and left/kicked out of the queue. 1 seconds left till full charge
-Michael Car2 is done charging at  5 seconds
+George is meant to charge for 7. Station A charging time is 5
+Jane is meant to charge for 7. Station B charging time is 5
+George Car3 has charged for  5 seconds and left/kicked out of the queue. 2 seconds left till full charge
+Jane Car1 has charged for  5 seconds and left/kicked out of the queue. 2 seconds left till full charge
 Jane Car1 is done charging at  5 seconds
-George is meant to charge for 0. Station B charging time is 5
-George Car3 is done charging at  0 seconds
-Johannes is meant to charge for 7. Station B charging time is 5
-Johannes Car4 has charged for  5 seconds and left/kicked out of the queue. 2 seconds left till full charge
-Johannes Car4 is done charging at  5 seconds
-Servus is meant to charge for 9. Station B charging time is 5
-Servus Car5 has charged for  5 seconds and left/kicked out of the queue. 4 seconds left till full charge
+George Car3 is done charging at  5 seconds
+Michael is meant to charge for 3. Station B charging time is 5
+Johannes is meant to charge for 4. Station A charging time is 5
+Michael Car2 is done charging at  3 seconds
+Servus is meant to charge for 7. Station B charging time is 5
+Johannes Car4 is done charging at  4 seconds
+Servus Car5 has charged for  5 seconds and left/kicked out of the queue. 2 seconds left till full charge
 Servus Car5 is done charging at  5 seconds

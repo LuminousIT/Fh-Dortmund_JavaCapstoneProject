@@ -15,6 +15,7 @@ import java.util.logging.Logger;
  * maxWaitTime of the CS is exceeded, and Queue is empty, set Status of CS to
  * Empty
  * 
+ * 
  */
 
 public class ChargingSimulation {
@@ -38,11 +39,12 @@ public class ChargingSimulation {
 	public void runSimulationThread() {
 		ChargingStation station1 = chargingStationList.get(0);
 		if (station1.getAvailability()) { // means no thread is running
-			station1.startChargingCar();
+			station1.startChargingCarWithLogs();
 		}
+		
 		ChargingStation station2 = chargingStationList.get(1);
 		if (station2.getAvailability()) {
-			station2.startChargingCar();
+			station2.startChargingCarWithLogs();
 		}
 	}
 

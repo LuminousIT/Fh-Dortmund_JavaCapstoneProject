@@ -41,6 +41,6 @@ public class ChargingStationSimulation {
 		LOGGER.info(logMessage);
 	}
 
-
+	
 
 }
