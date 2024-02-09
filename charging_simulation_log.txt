@@ -1,0 +1,5 @@
+Car1 will be charging in Station B
+Car2 will be charging in Station B
+Car3 will be charging in Station A
+Car4 will be charging in Station A
+Car5 will be charging in Station B

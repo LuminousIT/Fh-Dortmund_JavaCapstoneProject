@@ -3,6 +3,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 class ChargingStationLoggers extends BaseLogger  {
+	
+	public ChargingStationLoggers() {
+		
+	}
 	 @Override
 	 public void log(String message) {
 		 super.log("ChargingStationLogger: " + message);
@@ -10,7 +14,7 @@ class ChargingStationLoggers extends BaseLogger  {
 	 
 	 @Override
 	 public void logActivity(String message) {
-		 super.log("ChargingStationLogger: " + message);
+//		 super.log("ChargingStationLogger: " + message);
 		  try (BufferedWriter writer = new BufferedWriter(new FileWriter("charging_station_log.txt", true))) {
 	            writer.write(message);
 	            writer.newLine();
@@ -19,6 +23,49 @@ class ChargingStationLoggers extends BaseLogger  {
 	        }
 	 }
 }
+
+class ChargingSimulationLoggers extends BaseLogger  {
+	
+	public ChargingSimulationLoggers() {
+		
+	}
+	 @Override
+	 public void log(String message) {
+		 super.log("ChargingSimulationLoggers: " + message);
+	 }
+	 
+	 @Override
+	 public void logActivity(String message) {
+		  try (BufferedWriter writer = new BufferedWriter(new FileWriter("charging_simulation_log.txt", true))) {
+	            writer.write(message);
+	            writer.newLine();
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	 }
+}
+
+class ChargingStationSimulationLoggers extends BaseLogger  {
+	
+	public ChargingStationSimulationLoggers() {
+		
+	}
+	 @Override
+	 public void log(String message) {
+		 super.log("ChargingStationSimulationLoggers: " + message);
+	 }
+	 
+	 @Override
+	 public void logActivity(String message) {
+		  try (BufferedWriter writer = new BufferedWriter(new FileWriter("charging_station_simulation_log.txt", true))) {
+	            writer.write(message);
+	            writer.newLine();
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	 }
+}
+
 
 class EnergyManagementSystemLoggers extends BaseLogger {
 	 @Override
@@ -35,6 +82,7 @@ class EnergyManagementSystemLoggers extends BaseLogger {
 	        } catch (IOException e) {
 	            e.printStackTrace();
 	        }
+		  
 	 }
 }
 
@@ -46,7 +94,7 @@ class UsersLoggers extends BaseLogger {
 	 
 	 @Override
 	 public void logActivity(String message) {
-		 super.log("UsersLoggers: " + message);
+//		 super.log("UsersLoggers: " + message);
 		  try (BufferedWriter writer = new BufferedWriter(new FileWriter("users_log.txt", true))) {
 	            writer.write(message);
 	            writer.newLine();
@@ -56,4 +104,4 @@ class UsersLoggers extends BaseLogger {
 	 }
 }
 
-// we will be adding more as project develops
+

@@ -1,0 +1,41 @@
+Thread starts for Station A
+Station A is using Energy Source  WIND to charge the Car
+Thread starts for Station B
+Station B is using Energy Source  WIND to charge the Car
+Car1 will charge for  7 seconds
+Car3 will charge for  7 seconds
+Car3 is in queue charging for  1 seconds at Station A
+Car1 is in queue charging for  1 seconds at Station B
+Car1 is in queue charging for  2 seconds at Station B
+Car3 is in queue charging for  2 seconds at Station A
+Car1 is in queue charging for  3 seconds at Station B
+Car3 is in queue charging for  3 seconds at Station A
+Car1 is in queue charging for  4 seconds at Station B
+Car3 is in queue charging for  4 seconds at Station A
+Car1 is in queue charging for  5 seconds at Station B
+Car3 is in queue charging for  5 seconds at Station A
+Car1 has charged for  5 seconds and left/kicked out of the queue. 2 seconds left till full charge
+Car3 has charged for  5 seconds and left/kicked out of the queue. 2 seconds left till full charge
+Car3 is done charging at  5 seconds
+Car1 is done charging at  5 seconds
+Car2 will charge for  3 seconds
+Car4 will charge for  4 seconds
+Car2 is in queue charging for  1 seconds at Station B
+Car4 is in queue charging for  1 seconds at Station A
+Car2 is in queue charging for  2 seconds at Station B
+Car4 is in queue charging for  2 seconds at Station A
+Car4 is in queue charging for  3 seconds at Station A
+Car2 is in queue charging for  3 seconds at Station B
+Car2 is done charging at  3 seconds
+Car4 is in queue charging for  4 seconds at Station A
+Car5 will charge for  7 seconds
+Car5 is in queue charging for  1 seconds at Station B
+Car5 is in queue charging for  2 seconds at Station B
+Car4 is done charging at  4 seconds
+Station A is done charging all cars in its station...
+Car5 is in queue charging for  3 seconds at Station B
+Car5 is in queue charging for  4 seconds at Station B
+Car5 is in queue charging for  5 seconds at Station B
+Car5 has charged for  5 seconds and left/kicked out of the queue. 2 seconds left till full charge
+Car5 is done charging at  5 seconds
+Station B is done charging all cars in its station...

@@ -7,10 +7,7 @@
 4. Umaya Rahman Akhi (7213389 MDT)
 
 ### Github repository 
-Link to the github project - https://github.com/LuminousIT/Fh-Dortmund_JavaCapstoneProject
+Link to the github project - https://github.com/LuminousIT/Fh-Dortmund_JavaCapstoneProject/tree/capstone-final
 
 ### Link to Explainer Video
-- Hometask 2: Link to the video project - https://drive.google.com/file/d/1pg7YT8QxuBWu3oSyYGbr5I7E9hxt1X7S/view?usp=sharing
-- **HOMETASK 3:**  https://drive.google.com/file/d/1G5B_apMJwCaS5aW8yo0iwtdyyOKphoK-/view?usp=sharing
-
-**Video also attached to zip file**
+- Hometask 5: Link to the video project - https://drive.google.com/file/d/1JQPWtlNvgeEqkjLN2lnkid2zNF4p5EEz/view
